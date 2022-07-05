@@ -23,7 +23,7 @@ int main(){
   for(int x = 0; x < N; x++){
     for (int k = 0; k < N; k++){
       for (int y = 0; y < N; y++){
-        C[N * x + (k)] += A[N * x + (y)] * B[N * y + k];
+        C[N * x + (k)] += A[N * x + (y)] * B[N * y + (k)];
       }
     }
   }
@@ -33,7 +33,7 @@ int main(){
   for(int i=0; i < N; i++){
     for (int j=0; j < N; j++){
       if (C[N * i + j] - val[N * i + j] > 1e-3){
-        printf("Missmatch at %d %d\t values %.3f %.3f\n", i ,j , C[N * i+j], val[N * i+j]);
+        printf("Missmatch at [%d][%d]\t values %.3f %.3f\n", i ,j , C[N * i+j], val[N * i+j]);
       }
     }
   }
